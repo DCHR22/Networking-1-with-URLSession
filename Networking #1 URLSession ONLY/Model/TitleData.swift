@@ -24,7 +24,7 @@ struct Main : Decodable { //Since Data is a designated object of swift we change
    
 }
 
-struct TitleData1: Decodable {
+public struct TitleData1: Decodable {
     
     let kind : String
     

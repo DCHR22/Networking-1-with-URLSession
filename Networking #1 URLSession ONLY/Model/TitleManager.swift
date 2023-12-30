@@ -52,7 +52,7 @@ struct TitleManager {
             
             var titleArray = fillArray(decodedData: decodedData)
             print("X\(titleArray)")
-           TitleViewController.titleArray = titleArray // why doesn´t it modify the TitleViewController titleArray property?
+           //TitleViewController.titleArray = titleArray // why doesn´t it modify the TitleViewController titleArray property?
             
             //print(titleArray)
             

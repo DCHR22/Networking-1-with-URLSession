@@ -27,20 +27,23 @@ class ViewController: UIViewController {
     }
     
     @IBAction func mexicoPressed(_ sender: UIButton) {
+        //TODO: esta ya esta de mas
+
+        /*    mTitleManager.titleSelection = "mexico"
+        var mTitleManager = TitleManager()
+            TitleViewController.titleMO = mTitleManager*/
         
-            var mTitleManager = TitleManager()
-            mTitleManager.titleSelection = "mexico"
-            TitleViewController.titleMO = mTitleManager
-        
-        performSegue(withIdentifier: "SelectionToTitle" , sender: self)
+        performSegue(withIdentifier: "SelectionToTitle" , sender: "mexico")
     }
     
     @IBAction func videogamesPressed(_ sender: UIButton) {
         
+ 
+        //TODO: esta ya esta de mas
+       /* TitleViewController.titleMO = vgTitleManager
         var vgTitleManager = TitleManager()
-        vgTitleManager.titleSelection = "videogames"
-        TitleViewController.titleMO = vgTitleManager
-        performSegue(withIdentifier: "SelectionToTitle" , sender: self)
+        vgTitleManager.titleSelection = "videogames"*/
+        performSegue(withIdentifier: "SelectionToTitle" , sender: "videogames")
         
     }
     
@@ -57,6 +60,15 @@ class ViewController: UIViewController {
         }
         
         // Do any additional setup after loading the view.
+    }
+    
+    
+    //TODO: aqui agreggue el prepare
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "SelectionToTitle" {
+            let controller = segue.destination as? TitleViewController
+            controller?.titleSelection = sender as! String
+        }
     }
 
 
