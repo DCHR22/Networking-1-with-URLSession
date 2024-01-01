@@ -27,31 +27,22 @@ class ViewController: UIViewController {
     }
     
     @IBAction func mexicoPressed(_ sender: UIButton) {
-        //TODO: esta ya esta de mas
-
-        /*    mTitleManager.titleSelection = "mexico"
-        var mTitleManager = TitleManager()
-            TitleViewController.titleMO = mTitleManager*/
         
-        performSegue(withIdentifier: "SelectionToTitle" , sender: "mexico")
+        performSegue(withIdentifier: "SelectionToTitle" , sender: "mexico") // We simply choose mexico as the sender since it is way easier. We know for a fact that by pressing this button we are selecting the topic.
     }
     
     @IBAction func videogamesPressed(_ sender: UIButton) {
         
- 
-        //TODO: esta ya esta de mas
-       /* TitleViewController.titleMO = vgTitleManager
-        var vgTitleManager = TitleManager()
-        vgTitleManager.titleSelection = "videogames"*/
-        performSegue(withIdentifier: "SelectionToTitle" , sender: "videogames")
+        performSegue(withIdentifier: "SelectionToTitle" , sender: "videogames") // Same thing with this one.
         
     }
     
    
     override func viewDidLoad() {
+        
         super.viewDidLoad()
         
-        selectTopic.layer.cornerRadius = selectTopic.frame.height / 2
+        selectTopic.layer.cornerRadius = selectTopic.frame.height / 2 // This help to make the pretty select title button a little rounded.
         
         topicsCollection.forEach { btn in
             btn.layer.cornerRadius = btn.frame.height / 2
@@ -59,15 +50,15 @@ class ViewController: UIViewController {
             btn.alpha = 0
         }
         
-        // Do any additional setup after loading the view.
     }
     
     
-    //TODO: aqui agreggue el prepare
+    //This prepare is super important since it is how we will modify the "titleSelection" property in the TitleViewController.
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "SelectionToTitle" {
             let controller = segue.destination as? TitleViewController
-            controller?.titleSelection = sender as! String
+            controller?.titleSelection = sender as! String // This line is literally telling the compiler to get the property of the controller TitleViewController to be equal as the sender SENT AS A PARAMETER in the performSegueMethod.
         }
     }
 

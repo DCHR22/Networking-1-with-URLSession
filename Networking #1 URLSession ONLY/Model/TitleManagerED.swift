@@ -7,16 +7,17 @@
 
 import Foundation
 
-//TODO: se declaran los delegados
+//This service delegate does help to transport the decoded data to the TitleViewController from the parseJSON method on this class
+
 public protocol ServiceDelegate {
-    func onSuccess(data: [TitleData1])
-    func onError(error: String)
+    func onSuccess(data: [TitleData1]) //1 This two functions will be implemented on the TitleViewController class
+    func onError(error: String) //2
 }
 
 
 struct TitleManagerED {
     
-    var titleSelection = ""
+    var titleSelection = "" // This prperty is indeed filled by the 
     var delegate : ServiceDelegate?
     
     let titleURL = "https://reddit.com/r/"

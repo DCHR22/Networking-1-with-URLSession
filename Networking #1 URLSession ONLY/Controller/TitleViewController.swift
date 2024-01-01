@@ -11,18 +11,14 @@ import UIKit
 class TitleViewController : UITableViewController {
 
     var titleMO = TitleManagerED()
-    //TODO: esto es para que asignes en el sigue el tipo de topic
-    var titleSelection = ""
-    //static var titleArray : [String] = [String]()
-    //TODO: se crea el data source intenta no crear casi variables estaticas, recuerda que pueden obtener la info
-    var dataSource: [TitleData1] = [TitleData1]()
+    var titleSelection = "" // This titleSelection is equal to the sender parameter from the performSegue Method.
+    var dataSource: [TitleData1] = [TitleData1]() // This data source is super important since it is indeed what we will be using to populate the table view cells. 
     
+
     override func viewDidLoad() {
-        
-        
+
         super.viewDidLoad()
-        //TODO: Aqui se asigna el delgado y se llama al servicio
-        self.titleMO.fetchTitle(titleSelection: titleSelection, delegate: self)
+        self.titleMO.fetchTitle(titleSelection: titleSelection, delegate: self) // On this one we initiate the service. 
     }
     
     

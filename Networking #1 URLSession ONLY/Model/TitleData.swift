@@ -15,7 +15,7 @@ struct TitleData: Decodable{
     
 }
 
-struct Main : Decodable { //Since Data is a designated object of swift we changed the name of the struct for Pata to avoid errors
+struct Main : Decodable { //Since Data is a designated object of swift we changed the name of the struct for Main to avoid errors
     
     let after : String
     
