@@ -1,10 +1,3 @@
-//
-//  TitleData.swift
-//  Networking #1 URLSession ONLY
-//
-//  Created by Camilo L-Shide on 21/12/23.
-//
-
 import Foundation
 
 struct TitleData: Decodable{
@@ -28,25 +21,17 @@ public struct TitleData1: Decodable {
     
     let kind : String
     
-    let data : Data1
+    let data : Main1
     
 }
 
 
 
-struct Data1 : Decodable {
+struct Main1 : Decodable {
     
     let title : String 
     let subreddit : String
 }
 
-
-/*struct Children : Decodable {
-    
-    let kind : String
-    let data : Pata1
-    
-
-}*/
 
 

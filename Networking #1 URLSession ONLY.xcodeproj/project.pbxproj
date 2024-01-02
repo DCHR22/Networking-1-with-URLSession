@@ -15,7 +15,6 @@
 		B3CD94E82B32B01D00782B6F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B3CD94E72B32B01D00782B6F /* Assets.xcassets */; };
 		B3CD94EB2B32B01D00782B6F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B3CD94E92B32B01D00782B6F /* LaunchScreen.storyboard */; };
 		B3CD94F32B33F5FC00782B6F /* TitleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3CD94F22B33F5FC00782B6F /* TitleViewController.swift */; };
-		B3CD94F52B33F85700782B6F /* TitleManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3CD94F42B33F85700782B6F /* TitleManager.swift */; };
 		B3CD94F72B350C5D00782B6F /* TitleData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3CD94F62B350C5D00782B6F /* TitleData.swift */; };
 /* End PBXBuildFile section */
 
@@ -30,7 +29,6 @@
 		B3CD94EA2B32B01D00782B6F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B3CD94EC2B32B01D00782B6F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B3CD94F22B33F5FC00782B6F /* TitleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleViewController.swift; sourceTree = "<group>"; };
-		B3CD94F42B33F85700782B6F /* TitleManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleManager.swift; sourceTree = "<group>"; };
 		B3CD94F62B350C5D00782B6F /* TitleData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -79,7 +77,6 @@
 		B3CD94F82B350C6E00782B6F /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				B3CD94F42B33F85700782B6F /* TitleManager.swift */,
 				B3CD94F62B350C5D00782B6F /* TitleData.swift */,
 				5BFA32F82B407EFB00A7F8A1 /* TitleManagerED.swift */,
 			);
@@ -180,7 +177,6 @@
 				B3CD94DF2B32B01D00782B6F /* AppDelegate.swift in Sources */,
 				B3CD94E12B32B01D00782B6F /* SceneDelegate.swift in Sources */,
 				5BFA32F92B407EFB00A7F8A1 /* TitleManagerED.swift in Sources */,
-				B3CD94F52B33F85700782B6F /* TitleManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

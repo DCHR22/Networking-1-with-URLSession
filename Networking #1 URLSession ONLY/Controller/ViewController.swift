@@ -1,10 +1,3 @@
-//
-//  ViewController.swift
-//  Networking #1 URLSession ONLY
-//
-//  Created by Camilo L-Shide on 19/12/23.
-//
-
 import UIKit
 
 class ViewController: UIViewController {

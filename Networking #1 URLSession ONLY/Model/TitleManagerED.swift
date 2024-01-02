@@ -1,17 +1,10 @@
-//
-//  TitleManagerED.swift
-//  Networking #1 URLSession ONLY
-//
-//  Created by Jose Eduardo Rodriguez Pacheco on 30/12/23.
-//
-
 import Foundation
 
 //This service delegate does help to transport the decoded data to the TitleViewController from the parseJSON method on this class
 
 public protocol ServiceDelegate {
     func onSuccess(data: [TitleData1]) //1 This two functions will be implemented on the TitleViewController class
-    func onError(error: String) //2
+    func onError(error: String) //
 }
 
 
@@ -57,12 +50,13 @@ struct TitleManagerED {
         let decoder = JSONDecoder()
         do {
             let decodedData = try decoder.decode(TitleData.self, from: titleData)
-            //TODO: se manda la info de la data
-            self.delegate?.onSuccess(data: decodedData.data.children)
+            
+            self.delegate?.onSuccess(data: decodedData.data.children) // In this line, what we strive to pass to the TitleViewController is the JSON children array because that is indeed the array that contains all of the Data1 objects that contain the title inside them. By pasing this chlidren array we won't have to use an array to get a hold of every title since the indexPath.row property from the cellForRowAt method will help us to populate each cell by diving into the children object property until we get to the title.
         } catch{
             print(error.localizedDescription)
-            //TODO: si ocurrio algun error se manda el error
-            self.delegate?.onError(error: error.localizedDescription)
+            
+            self.delegate?.onError(error: error.localizedDescription) // We do sent an explanation of the error that could be used to show an alert
+            
         }
         
     }
